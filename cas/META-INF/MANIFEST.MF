@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Implementation-Vendor: Jasig
+Implementation-Title: Jasig CAS Web Application
+Implementation-Version: 4.0.0
+Implementation-Vendor-Id: org.jasig.cas
+Built-By: jleleu
+Build-Jdk: 1.7.0
+Specification-Vendor: Jasig
+Specification-Title: Jasig CAS Web Application
+Created-By: Apache Maven 3.0.4
+Specification-Version: 4.0.0
+Archiver-Version: Plexus Archiver
+

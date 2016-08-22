@@ -1,0 +1,11 @@
+.editable-address {
+    display: block;
+    margin-bottom: 5px;  
+}
+
+.editable-address span {
+    width: 70px;  
+    display: inline-block;
+}
+
+.editable-address input {border:1px solid #ccc;padding:4px 8px;background:#fff}

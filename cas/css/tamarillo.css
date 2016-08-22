@@ -1,0 +1,33 @@
+/* ---- Gebo Admin tamarillo theme ---- */
+
+    .navbar-inner {
+		background: #af2c36;
+		background: -moz-linear-gradient(top, #af2c36 0%, #791e25 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#af2c36), color-stop(100%,#791e25));
+		background: -webkit-linear-gradient(top, #af2c36 0%,#791e25 100%);
+		background: -o-linear-gradient(top, #af2c36 0%,#791e25 100%);
+		background: -ms-linear-gradient(top, #af2c36 0%,#791e25 100%);
+		background: linear-gradient(top, #af2c36 0%,#791e25 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#af2c36', endColorstr='#791e25',GradientType=0 );
+    }
+    .navbar .nav .active > a, .navbar .nav .active > a:hover {
+        background: #94252e !important;
+    }
+    .navbar .divider-vertical {
+		border-left-color:#791e25;
+        border-right-color:#bd2f3a;
+    }
+    .dropdown-menu li > a:hover, .dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+    .nav-list > .active > a, .nav-list > .active > a:hover,
+    span.dynatree-active a {
+        background: #94252e !important;
+    }
+	.ui-menu .ui-menu-item a.ui-state-hover,
+    .ui-menu .ui-menu-item a.ui-state-active {
+        background: #94252e !important;
+        border-color:#94252e !important;
+    }
+
+	.table thead th {background-color:#f6eeef !important}
+	.dataTables_wrapper th.sorting_asc,.dataTables_wrapper th.sorting_desc {background-color:#ead8da !important}
