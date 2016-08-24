@@ -143,7 +143,8 @@ shiro.successUrl=/users/loginSuccess
 		<filter-name>shiroFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-	```
+```
+	
 ##  系统运行
 1.  端口说明，cas：8080，node1：8081，node2:8082，大家可以采用maven提供的tomcat7插件，配置如下：
 ``` xml
