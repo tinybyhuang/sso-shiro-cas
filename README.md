@@ -170,9 +170,9 @@ shiro.successUrl=/users/loginSuccess
 > node2：http://127.0.0.1:8082/node2
 
 3.访问系统
-> 输入  http://127.0.0.1:8081/node1/shiro-cas，进入cas验证
+> 输入  http://127.0.0.1:8081/node1/shiro-cas ，进入cas验证
 
-> 输入用户名  admin，密码 admin@2015，验证成功后将会重定向到http://127.0.0.1:8081/node1//users/loginSuccess，也就是node1系统的主页，里面的节点2代表的是node2系统的主页，你会发现我们不需要登录到node2系统就能访问其中的系统了
+> 输入用户名  admin，密码 admin@2015，验证成功后将会重定向到http://127.0.0.1:8081/node1//users/loginSuccess ，也就是node1系统的主页，里面的节点2代表的是node2系统的主页，你会发现我们不需要登录到node2系统就能访问其中的系统了
 
 
 
