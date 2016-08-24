@@ -1,0 +1,234 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.distinct</groupId>
+  <artifactId>spring-node-2</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  
+  <properties>
+  	<spring.version>4.0.5.RELEASE</spring.version>
+  	<slf4j.version>1.7.7</slf4j.version>
+  	<jackson.version>1.9.13</jackson.version>
+  	<shiro.version>1.2.3</shiro.version>
+  	<!-- 下面这些定义的属性在mybatis-generator.xml文件中引用 -->
+	<classPathEntry.location>D:/maven/repository/mysql/mysql-connector-java/5.1.30/mysql-connector-java-5.1.30.jar</classPathEntry.location>
+	<jdbc.driverClass>com.mysql.jdbc.Driver</jdbc.driverClass>
+	<jdbc.connectionURL>jdbc:mysql://127.0.0.1:3306/db_test</jdbc.connectionURL>
+	<jdbc.user>root</jdbc.user>
+	<jdbc.password>123456</jdbc.password>
+	<model.target.dir>${basedir}/src/main/java</model.target.dir>
+	<mapper.target.dir>${basedir}/src/main/resources</mapper.target.dir>
+	<dao.target.dir>${basedir}/src/main/java</dao.target.dir>
+  </properties>
+  
+  <dependencies>
+  
+  	<!-- spring jar -->
+  	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-core</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context-support</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-web</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-webmvc</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-jdbc</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	
+	<!-- json jar -->
+	<!-- json数据 -->
+	<dependency>
+		<groupId>org.codehaus.jackson</groupId>
+		<artifactId>jackson-mapper-asl</artifactId>
+		<version>${jackson.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.codehaus.jackson</groupId>
+		<artifactId>jackson-core-asl</artifactId>
+		<version>${jackson.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>com.fasterxml.jackson.jaxrs</groupId>
+		<artifactId>jackson-jaxrs-json-provider</artifactId>
+		<version>2.7.0</version>
+	</dependency>
+	
+	<!-- jsp jar -->
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>servlet-api</artifactId>
+		<version>2.5</version>
+		<type>jar</type>
+		<scope>provided</scope>
+	</dependency>
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>jsp-api</artifactId>
+		<version>2.0</version>
+		<scope>provided</scope>
+	</dependency>
+	<dependency>
+		<groupId>taglibs</groupId>
+		<artifactId>standard</artifactId>
+		<version>1.1.2</version>
+	</dependency>
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>jstl</artifactId>
+		<version>1.1.2</version>
+	</dependency>
+	
+	<!-- mysql驱动包 -->
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>5.1.30</version>
+	</dependency>
+	<!-- mybatis核心包 -->
+	<dependency>
+		<groupId>org.mybatis</groupId>
+		<artifactId>mybatis</artifactId>
+		<version>3.2.7</version>
+	</dependency>
+	<!-- mybatis/spring包 -->
+	<dependency>
+		<groupId>org.mybatis</groupId>
+		<artifactId>mybatis-spring</artifactId>
+		<version>1.2.2</version> 
+	</dependency>
+	<!-- Mybatis generator生成器 -->
+	<dependency>
+		<groupId>org.mybatis.generator</groupId>
+		<artifactId>mybatis-generator-core</artifactId>
+		<version>1.3.1</version>
+	</dependency>
+
+	<!-- 阿里巴巴数据源包 -->
+	<dependency>
+		<groupId>com.alibaba</groupId>
+		<artifactId>druid</artifactId>
+		<version>1.0.6</version>
+	</dependency> 
+	
+	<!-- junit-test jar -->
+	<dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+		<version>4.9</version>
+	</dependency>
+	
+	<!-- log jar -->
+	<dependency>
+		<groupId>log4j</groupId>
+		<artifactId>log4j</artifactId>
+		<version>1.2.12</version>
+	</dependency>
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId>
+		<version>${slf4j.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-log4j12</artifactId>
+		<version>${slf4j.version}</version> 
+	</dependency>
+	
+	<!-- apache shiro 相关jar -->
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-aspectj</artifactId>
+			<version>${shiro.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>2.4.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-spring</artifactId>
+			<version>${shiro.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-core</artifactId>
+			<version>${shiro.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-cas</artifactId>
+			<version>${shiro.version}</version>
+		</dependency>
+	
+  </dependencies>
+  
+  <build>
+  	<finalName>spring-node-2</finalName>
+  	
+  	<plugins>
+  		
+  		<!-- JDK level -->
+  		<plugin> 
+            <groupId>org.apache.maven.plugins</groupId> 
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.1</version> 
+            <configuration> 
+                <source>1.7</source>
+				<target>1.7</target> 
+                <encoding>UTF8</encoding> 
+            </configuration> 
+         </plugin> 
+         
+        <!--  tomcat7 plugin -->
+         <plugin>
+			<groupId>org.apache.tomcat.maven</groupId>
+			<artifactId>tomcat7-maven-plugin</artifactId>
+			<version>2.1</version>
+			<configuration>
+				<port>8082</port>
+				<uriEncoding>UTF-8</uriEncoding>
+				<server>tomcat7</server>
+				<path>/node2</path>
+			</configuration>
+		</plugin>
+		
+		<!-- 调用Maven命令：mvn mybatis-generator:generate -->
+		<plugin>
+			<groupId>org.mybatis.generator</groupId>
+			<artifactId>mybatis-generator-maven-plugin</artifactId>
+			<version>1.3.1</version>
+			<configuration>
+				<configurationFile>${basedir}/src/main/resources/mybatis/generateUser.xml</configurationFile>
+				<verbose>true</verbose>
+				<overwrite>true</overwrite>
+			</configuration>
+		</plugin>
+  	
+  	</plugins>
+  </build>
+  
+</project>
