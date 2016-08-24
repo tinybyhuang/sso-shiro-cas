@@ -6,7 +6,7 @@ spring下使用shiro+cas配置单点登录，多个系统之间的访问，每�
 2.  doc：   文档目录，里面有数据库生成语句，采用的是MySQL5.0，数据库名为db_test  
 3.  spring-node-1：   应用1
 4.  spring-node-2：   应用2
-  
+
   其中node1跟node2都是采用spring + springMVC + mybatis 框架，使用maven做项目管理
 
 ## cas集成说明
