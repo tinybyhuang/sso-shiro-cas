@@ -123,6 +123,7 @@ shiro.successUrl=/users/loginSuccess
 	</bean>
 ```
 > 其中shiroFilter这个类注意用于需要拦截的url请求，需要注意的是这个是shiro的拦截，我们还需要配置cas的过滤配置casFilter
+
 > casRealm这个类是需要我们自己实现的，注意用于shiro的权限验证，里面的属性说明如下
 
 1.  defaultRoles： 默认的角色
