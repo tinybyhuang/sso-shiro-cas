@@ -58,6 +58,7 @@ shiro.successUrl=/users/loginSuccess
 
 ```
 其中shiro.loginUrl 跟 shiro.logoutUrl的前面是cas验证的地址，后面的是我们应用系统的地址，这样配置的方式是为了在访问我们的应用系统的时候，先到cas进行验证，如果验证成功了，cas将重定向到shiro.successUrl 所表示的地址
+
 3.在/spring-node-1/src/main/resources/conf/shiro.xml 文件中
 ``` xml
 <!-- Shiro Filter -->
@@ -122,9 +123,9 @@ shiro.successUrl=/users/loginSuccess
 		<property name="arguments" ref="securityManager"></property>
 	</bean>
 ```
-> 其中shiroFilter这个类注意用于需要拦截的url请求，需要注意的是这个是shiro的拦截，我们还需要配置cas的过滤配置casFilter
+> 其中shiroFilter这个类主要用于需要拦截的url请求，需要注意的是这个是shiro的拦截，我们还需要配置cas的过滤配置casFilter
 
-> casRealm这个类是需要我们自己实现的，注意用于shiro的权限验证，里面的属性说明如下
+> casRealm这个类是需要我们自己实现的，主要用于shiro的权限验证，里面的属性说明如下
 
 1.  defaultRoles： 默认的角色
 2.  casServerUrlPrefix：  cas地址
