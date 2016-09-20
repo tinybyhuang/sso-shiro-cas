@@ -18,5 +18,7 @@
 	<a href="http://127.0.0.1:8081/node1/shiro-cas">节点1</a>
 	
 	<a href="http://127.0.0.1:8082/node2/shiro-cas">节点2</a>
+	
+	<a href="http://127.0.0.1:8081/node1/logout">单点登出</a>
 </body>
 </html>
