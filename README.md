@@ -8,7 +8,7 @@ spring下使用shiro+cas配置单点登录，多个系统之间的访问，每�
 4.  spring-node-2：   应用2
 
   其中node1跟node2都是采用spring + springMVC + mybatis 框架，使用maven做项目管理
-
+          
 ## cas集成说明
 1.首先采用的是查数据库的方式来校验用户身份的，在cas/WEB-INF/deployerConfigContext.xml中第135行构建了这个类型
 ``` xml
