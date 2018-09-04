@@ -57,7 +57,9 @@ shiro.failureUrl=/users/loginSuccess
 shiro.successUrl=/users/loginSuccess
 
 ```
-其中shiro.loginUrl 跟 shiro.logoutUrl的前面是cas验证的地址，后面的是我们应用系统的地址，这样配置的方式是为了在访问我们的应用系统的时候，先到cas进行验证，如果验证成功了，cas将重定向到shiro.successUrl 所表示的地址
+其中shiro.loginUrl 跟 shiro.logoutUrl的前面是cas验证的地址，后面的是我们应用系统的地址，这样配置的方式是为了在访问我们的应用系统的时候，先到cas进行验证，如果验证成功了，cas将重定向到shiro.successUrl 所表示的地址。
+
+这里说下端口的问题，8080是cas服务器的端口，8081是node1是服务器端口，8082是node2的服务器端口，我这里的配置方式仅是为了演示效果，大家可以根据各自的情况自行修改
 
 3.在/spring-node-1/src/main/resources/conf/shiro.xml 文件中
 ``` xml
