@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="cas:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/cas_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="cas/web/Web" />
+    </root>
+  </artifact>
+</component>
